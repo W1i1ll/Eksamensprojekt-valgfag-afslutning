@@ -3,7 +3,26 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import herovideo from "../assets/images/herovideo.mp4";
 ---
 
 <MainLayout title="MaltClub" />
-<h1 class="text-white">Hej</h1>
+<div class="relative w-full h-screen">
+  <!-- Video -->
+  <video
+    src={herovideo}
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop></video>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+
+  <!-- H1 tekst -->
+  <h1
+    class="absolute karantina inset-0 flex items-center justify-center text-[60px] md:text-[64px] lg:text-[128px] text-center text-white font-bold z-20"
+  >
+    BRYGGET MED OMSORG <br /> LEVERET MED KÆRLIGHED
+  </h1>
+</div>

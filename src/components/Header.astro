@@ -1,5 +1,142 @@
 ---
+import logo from "../assets/images/logo.svg";
+import { Image } from "astro:assets";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div
+  class="flex items-center justify-between px-4 py-2 text-black absolute top-2 left-0 w-full z-20"
+>
+  <!-- Logo -->
+  <div id="logo" class="flex-none">
+    <a href="/">
+      <Image src={logo} alt="MaltClub logo" class="h-auto w-auto" />
+    </a>
+  </div>
+
+  <!-- Navigation og burger-menu -->
+  <div class="flex items-center space-x-6">
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex space-x-6 mr-5">
+      <a href="#" class="hover:text-[#BE7E39] karantina text-white">Forside</a>
+      <a href="#" class="hover:text-[#BE7E39] karantina text-white">Produkter</a
+      >
+      <a href="/priser" class="hover:text-[#BE7E39] karantina text-white"
+        >Om os</a
+      >
+    </nav>
+
+    <!-- Desktop "Tilmeld ophold"-knap -->
+    <a
+      href="#"
+      class="hidden md:block border-2 text-white px-6 py-3 font-bold karantina"
+    >
+      BESTIL DIN ØL I DAG
+    </a>
+
+    <!-- Burger-menu for mobile -->
+    <button
+      id="burger-menu"
+      class="block md:hidden text-black focus:outline-none ml-4"
+      aria-label="Toggle navigation"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="white"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
 </div>
+
+<!-- Mobilmenu -->
+<div
+  id="mobile-menu"
+  class="hidden absolute top-0 left-0 w-full h-full bg-black shadow-md p-4 space-y-4 z-20"
+>
+  <!-- Close button -->
+  <button
+    id="close-menu"
+    class="absolute top-4 right-4 text-white"
+    aria-label="Close menu"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="white"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+
+  <!-- Mobilmenu links -->
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Højskoleophold</a
+  >
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Sommerhøjskole</a
+  >
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Priser</a
+  >
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Tilmeld</a
+  >
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Infomøder</a
+  >
+  <a
+    href="#"
+    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    >Om os</a
+  >
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.getElementById("burger-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
+
+    // Toggle visibility of mobile menu on burger click
+    burgerMenu.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden"); // Toggle visibility
+    });
+
+    // Close mobile menu when close button is clicked
+    closeMenu.addEventListener("click", function () {
+      mobileMenu.classList.add("hidden"); // Close menu when close button is clicked
+    });
+
+    // Close mobile menu when a link is clicked
+    const links = mobileMenu.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden"); // Close menu on link click
+      });
+    });
+  });
+</script>
