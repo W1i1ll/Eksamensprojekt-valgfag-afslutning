@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import herovideo from "../assets/images/herovideo.mp4";
 import beer1 from "../assets/images/beer1.webp";
 import beer2 from "../assets/images/beer2.webp";
+import passion from "../assets/images/passion.jpg";
 ---
 
 <MainLayout title="MaltClub" />
@@ -20,12 +21,13 @@ import beer2 from "../assets/images/beer2.webp";
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black opacity-40"></div>
+
   <!-- Indhold -->
   <div
-    class="relative z-10 flex items-center justify-center h-full text-white flex-col"
+    class="relative z-10 flex items-center justify-center text-white flex-col h-full"
   >
     <!-- Flasker -->
-    <div class="flex items-center justify-center gap-20 mb-8">
+    <div class="absolute top-16 flex items-center justify-center gap-28">
       <!-- Beer 1 -->
       <Image
         src={beer1}
@@ -41,7 +43,9 @@ import beer2 from "../assets/images/beer2.webp";
     </div>
 
     <!-- Hovedtekst -->
-    <h1 class="text-[45px] md:text-[64px] karantina font-bold text-center mb-4">
+    <h1
+      class="text-[45px] md:text-[64px] karantina font-bold text-center mt-60"
+    >
       BRYGGET MED OMSORG <br />
       LEVERET MED KÆRLIGHED
     </h1>
@@ -67,3 +71,26 @@ import beer2 from "../assets/images/beer2.webp";
     <a href="#next-section" class="text-white text-3xl animate-bounce"> ↓ </a>
   </div>
 </div>
+
+<section class="p-4">
+  <Image src={passion} alt="En person skænker øl op" class="rounded-[20px]" />
+
+  <!-- Kassen med sort baggrund og skygge -->
+  <div
+    class="bg-black p-6 rounded-[20px] mt-6"
+    style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+  >
+    <h1
+      class="text-[45px] md:text-[64px] karantina font-bold text-center text-white"
+    >
+      En <span class="text-[#BE7E39]">passion</span> for øl
+    </h1>
+    <p class="text-white text-[16px] mt-[20px]">
+      Hos MaltClub er vi passionerede omkring at udbrede kendskabet til øl med
+      historie og smag. Hver måned sammensætter vi en kasse fyldt med nøje
+      udvalgte specialøl fra bryghuse med noget på hjertet. Øl, der ikke bare
+      smager godt – men også fortæller en historie. <br />
+      <br /> Er du klar til din næste smagsoplevelse?
+    </p>
+  </div>
+</section>
