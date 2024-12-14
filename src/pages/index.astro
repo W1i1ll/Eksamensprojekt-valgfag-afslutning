@@ -4,11 +4,13 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import herovideo from "../assets/images/herovideo.mp4";
+import beer1 from "../assets/images/beer1.webp";
+import beer2 from "../assets/images/beer2.webp";
 ---
 
 <MainLayout title="MaltClub" />
 <div class="relative w-full h-screen">
-  <!-- Video -->
+  <!-- Video baggrund -->
   <video
     src={herovideo}
     class="absolute inset-0 w-full h-full object-cover"
@@ -18,11 +20,50 @@ import herovideo from "../assets/images/herovideo.mp4";
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black opacity-40"></div>
-
-  <!-- H1 tekst -->
-  <h1
-    class="absolute karantina inset-0 flex items-center justify-center text-[60px] md:text-[64px] lg:text-[128px] text-center text-white font-bold z-20"
+  <!-- Indhold -->
+  <div
+    class="relative z-10 flex items-center justify-center h-full text-white flex-col"
   >
-    BRYGGET MED OMSORG <br /> LEVERET MED KÆRLIGHED
-  </h1>
+    <!-- Flasker -->
+    <div class="flex items-center justify-center gap-20 mb-8">
+      <!-- Beer 1 -->
+      <Image
+        src={beer1}
+        alt="En øl"
+        class="w-auto h-[300px] transform rotate-[-15deg]"
+      />
+      <!-- Beer 2 -->
+      <Image
+        src={beer2}
+        alt="En øl"
+        class="w-auto h-[280px] transform rotate-[15deg]"
+      />
+    </div>
+
+    <!-- Hovedtekst -->
+    <h1 class="text-[45px] md:text-[64px] karantina font-bold text-center mb-4">
+      BRYGGET MED OMSORG <br />
+      LEVERET MED KÆRLIGHED
+    </h1>
+
+    <!-- Undertekst -->
+    <h2
+      class="mt-4 text-[24px] md:text-[24px] karantina font-bold text-center m-8"
+    >
+      Unikke specialøl, der forvandler din hverdag til en smagsoplevelse
+    </h2>
+
+    <!-- Call-to-action knap -->
+    <a
+      href="#"
+      class="karantina text-[32px] md:text-[32px] bg-[#A6411B] text-white px-6 py-3 rounded-[20px] hover:bg-[#8A3717]"
+    >
+      Se abonnementer
+    </a>
+  </div>
+
+  <!-- Scroll-pil -->
+  <div class="absolute bottom-4 left-0 right-0 flex justify-center">
+    <a href="#next-section" class="text-white text-3xl animate-bounce"> ↓ </a>
+  </div>
 </div>

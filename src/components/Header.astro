@@ -6,10 +6,17 @@ import { Image } from "astro:assets";
 <div
   class="flex items-center justify-between px-4 py-2 text-black absolute top-2 left-0 w-full z-20"
 >
-  <!-- Logo -->
-  <div id="logo" class="flex-none">
+  <!-- Logo for Desktop -->
+  <div id="logo" class="hidden md:flex">
     <a href="/">
-      <Image src={logo} alt="MaltClub logo" class="h-auto w-auto" />
+      <Image src={logo} alt="MaltClub logo" class="h-auto w-[150px]" />
+    </a>
+  </div>
+
+  <!-- Logo for Mobile -->
+  <div id="logo" class="md:hidden flex justify-center w-full">
+    <a href="/">
+      <Image src={logo} alt="MaltClub logo" class="h-auto w-[150px]" />
     </a>
   </div>
 
@@ -84,33 +91,18 @@ import { Image } from "astro:assets";
 
   <!-- Mobilmenu links -->
   <a
-    href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
-    >Højskoleophold</a
+    href="/index"
+    class="block hover:text-[#BE7E39] karantina text-white text-[48px] text-center"
+    >Forside</a
+  >
+  <a
+    href="/produkter"
+    class="block hover:text-[#BE7E39] karantina text-white text-[48px] text-center"
+    >Produkter</a
   >
   <a
     href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
-    >Sommerhøjskole</a
-  >
-  <a
-    href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
-    >Priser</a
-  >
-  <a
-    href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
-    >Tilmeld</a
-  >
-  <a
-    href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
-    >Infomøder</a
-  >
-  <a
-    href="#"
-    class="block hover:text-[#FF5A01] poppins text-white text-lg text-center"
+    class="block hover:text-[#BE7E39] karantina text-white text-[48px] text-center"
     >Om os</a
   >
 </div>
