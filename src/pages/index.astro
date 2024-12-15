@@ -37,30 +37,30 @@ import boblermobil from "../assets/images/boblermobil.svg";
     class="relative z-10 flex items-center justify-center text-white flex-col h-full"
   >
     <!-- Flasker -->
-    <div class="absolute top-16 flex items-center justify-center gap-28">
-      <!-- Øl 1 -->
+    <div class="absolute inset-0 flex justify-between items-center px-8">
+      <!-- Flaske 1 -->
       <Image
         src={beer1}
         alt="En øl"
-        class="w-auto h-[300px] transform rotate-[-15deg]"
+        class="hidden md:block w-[190px] h-auto transform rotate-[-15deg]"
       />
-      <!-- Øl 2 -->
+      <!-- Flaske 2 -->
       <Image
         src={beer2}
         alt="En øl"
-        class="w-auto h-[280px] transform rotate-[15deg]"
+        class="hidden md:block w-[140px] h-auto transform rotate-[15deg]"
       />
     </div>
 
     <h1
-      class="text-[45px] md:text-[64px] karantina font-bold text-center mt-60"
+      class="text-[45px] md:text-[128px] md:mt-2 karantina font-bold text-center mt-60"
     >
       BRYGGET MED OMSORG <br />
       LEVERET MED KÆRLIGHED
     </h1>
 
     <h2
-      class="mt-4 text-[24px] md:text-[24px] karantina font-bold text-center m-8"
+      class="mt-4 text-[24px] md:text-[40px] karantina font-bold text-center m-8"
     >
       Unikke specialøl, der forvandler din hverdag til en smagsoplevelse
     </h2>
@@ -68,7 +68,7 @@ import boblermobil from "../assets/images/boblermobil.svg";
     <!-- Call-to-action knap -->
     <a
       href="#"
-      class="karantina text-[32px] md:text-[32px] bg-[#A6411B] text-white px-6 py-3 rounded-[20px] hover:bg-[#8A3717]"
+      class="karantina text-[32px] bg-[#A6411B] hover:bg-[#8A3717] text-white py-3 px-6 rounded-[20px] z-20 relative"
     >
       Se abonnementer
     </a>
@@ -112,9 +112,13 @@ import boblermobil from "../assets/images/boblermobil.svg";
   </h2>
 
   <!-- Trin 1 -->
-  <div class="relative text-center">
+  <div class="relative text-center max-w-[800px] mx-auto">
     <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">1</h3>
-    <Image src={trin1} alt="En computerskærm med indkøbskurv" class="w-full" />
+    <Image
+      src={trin1}
+      alt="En computerskærm med indkøbskurv"
+      class="w-[80%] md:w-[50%] mx-auto"
+    />
     <p
       class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
     >
@@ -123,9 +127,13 @@ import boblermobil from "../assets/images/boblermobil.svg";
   </div>
 
   <!-- Trin 2 -->
-  <div class="relative text-center mt-8">
+  <div class="relative text-center mt-8 max-w-[800px] mx-auto">
     <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">2</h3>
-    <Image src={trin2} alt="En lastbil der leverer øl" class="w-full" />
+    <Image
+      src={trin2}
+      alt="En lastbil der leverer øl"
+      class="w-[80%] md:w-[50%] mx-auto"
+    />
     <p
       class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
     >
@@ -134,9 +142,13 @@ import boblermobil from "../assets/images/boblermobil.svg";
   </div>
 
   <!-- Trin 3 -->
-  <div class="relative text-center mt-8">
+  <div class="relative text-center mt-8 max-w-[800px] mx-auto">
     <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">3</h3>
-    <Image src={trin3} alt="To øl glas der skåler" class="w-full" />
+    <Image
+      src={trin3}
+      alt="To øl glas der skåler"
+      class="w-[80%] md:w-[50%] mx-auto"
+    />
     <p
       class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
     >
@@ -175,15 +187,12 @@ import boblermobil from "../assets/images/boblermobil.svg";
     </p>
   </div>
 
-  <!-- Flex container for billeder -->
   <div class="flex justify-center gap-8 mt-8">
-    <!-- Malt billede rykket ned med margin-top -->
     <div class="relative">
       <Image src={malt} alt="Malt" class="w-[200px] md:w-[300px]" />
     </div>
 
-    <!-- Humle billede rykket op til at ramme kassen -->
-    <div class="relative -mt-12">
+    <div class="relative -mt-16">
       <Image src={hops} alt="Humle" class="w-[200px] md:w-[300px]" />
     </div>
   </div>
@@ -203,8 +212,16 @@ import boblermobil from "../assets/images/boblermobil.svg";
     livlige bobler, og vandet binder det hele sammen med ren friskhed.
   </p>
 </div>
-<Image src={lemon} alt="Citroner" class="" />
-<Image src={appelsin} alt="Appelsiner" class="" />
+
+<div class="flex justify-center gap-8 mt-8">
+  <div class="relative">
+    <Image src={appelsin} alt="Appelsiner" class="w-[200px] md:w-[300px]" />
+  </div>
+
+  <div class="relative -mt-16">
+    <Image src={lemon} alt="Citroner" class="w-[200px] md:w-[300px]" />
+  </div>
+</div>
 
 <section>
   <Oplevelsecard />
