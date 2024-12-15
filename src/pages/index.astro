@@ -2,16 +2,26 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Oplevelsecard from "../components/Oplevelsecard.astro";
+import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import herovideo from "../assets/images/herovideo.mp4";
 import beer1 from "../assets/images/beer1.webp";
 import beer2 from "../assets/images/beer2.webp";
 import passion from "../assets/images/passion.jpg";
+import trin1 from "../assets/images/trin1.svg";
+import trin2 from "../assets/images/trin2.svg";
+import trin3 from "../assets/images/trin3.svg";
+import malt from "../assets/images/malt.png";
+import hops from "../assets/images/hops.png";
+import lemon from "../assets/images/lemon.webp";
+import appelsin from "../assets/images/appelsin.png";
+import boblerdesk from "../assets/images/boblerdesk.svg";
+import boblermobil from "../assets/images/boblermobil.svg";
 ---
 
 <MainLayout title="MaltClub" />
 <div class="relative w-full h-screen">
-  <!-- Video baggrund -->
   <video
     src={herovideo}
     class="absolute inset-0 w-full h-full object-cover"
@@ -28,13 +38,13 @@ import passion from "../assets/images/passion.jpg";
   >
     <!-- Flasker -->
     <div class="absolute top-16 flex items-center justify-center gap-28">
-      <!-- Beer 1 -->
+      <!-- Øl 1 -->
       <Image
         src={beer1}
         alt="En øl"
         class="w-auto h-[300px] transform rotate-[-15deg]"
       />
-      <!-- Beer 2 -->
+      <!-- Øl 2 -->
       <Image
         src={beer2}
         alt="En øl"
@@ -42,7 +52,6 @@ import passion from "../assets/images/passion.jpg";
       />
     </div>
 
-    <!-- Hovedtekst -->
     <h1
       class="text-[45px] md:text-[64px] karantina font-bold text-center mt-60"
     >
@@ -50,7 +59,6 @@ import passion from "../assets/images/passion.jpg";
       LEVERET MED KÆRLIGHED
     </h1>
 
-    <!-- Undertekst -->
     <h2
       class="mt-4 text-[24px] md:text-[24px] karantina font-bold text-center m-8"
     >
@@ -72,20 +80,20 @@ import passion from "../assets/images/passion.jpg";
   </div>
 </div>
 
-<section class="p-4">
+<!-- Passion for øl sektion -->
+<section class="p-2">
   <Image src={passion} alt="En person skænker øl op" class="rounded-[20px]" />
 
-  <!-- Kassen med sort baggrund og skygge -->
   <div
     class="bg-black p-6 rounded-[20px] mt-6"
     style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
   >
-    <h1
-      class="text-[45px] md:text-[64px] karantina font-bold text-center text-white"
+    <h2
+      class="text-[40px] md:text-[64px] karantina font-bold text-center text-white"
     >
       En <span class="text-[#BE7E39]">passion</span> for øl
-    </h1>
-    <p class="text-white text-[16px] mt-[20px]">
+    </h2>
+    <p class="text-white text-[16px] mt-[20px] jost">
       Hos MaltClub er vi passionerede omkring at udbrede kendskabet til øl med
       historie og smag. Hver måned sammensætter vi en kasse fyldt med nøje
       udvalgte specialøl fra bryghuse med noget på hjertet. Øl, der ikke bare
@@ -93,4 +101,112 @@ import passion from "../assets/images/passion.jpg";
       <br /> Er du klar til din næste smagsoplevelse?
     </p>
   </div>
+</section>
+
+<!-- Trin sektion -->
+<section>
+  <h2
+    class="text-[40px] m-10 md:text-[64px] karantina font-bold text-center text-white"
+  >
+    Tre simple trin til fantastiske øl
+  </h2>
+
+  <!-- Trin 1 -->
+  <div class="relative text-center">
+    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">1</h3>
+    <Image src={trin1} alt="En computerskærm med indkøbskurv" class="w-full" />
+    <p
+      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
+    >
+      Vælg dit MaltCLub abonnement
+    </p>
+  </div>
+
+  <!-- Trin 2 -->
+  <div class="relative text-center mt-8">
+    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">2</h3>
+    <Image src={trin2} alt="En lastbil der leverer øl" class="w-full" />
+    <p
+      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
+    >
+      Vi leverer direkte til døren
+    </p>
+  </div>
+
+  <!-- Trin 3 -->
+  <div class="relative text-center mt-8">
+    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">3</h3>
+    <Image src={trin3} alt="To øl glas der skåler" class="w-full" />
+    <p
+      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
+    >
+      Nyd unikke øl i godt selskab
+    </p>
+  </div>
+</section>
+
+<!-- Bobler -->
+<div class="relative">
+  <!-- Desktop-bobler (vises kun på større skærme) -->
+  <Image src={boblerdesk} alt="Ølbobler" class="hidden md:block mx-auto" />
+
+  <!-- Mobil-bobler (vises kun på mobile skærme) -->
+  <Image
+    src={boblermobil}
+    alt="Ølbobler"
+    class="block md:hidden mx-auto mt-10"
+  />
+</div>
+
+<section class="p-1">
+  <div
+    class="bg-black p-6 rounded-[20px] mt-6"
+    style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+  >
+    <h2 class="text-[36px] md:text-[64px] karantina font-bold text-white">
+      De <span class="text-[#BE7E39]">fire</span> nøgleingredienser
+    </h2>
+    <p class="text-white text-[16px] mt-[20px] jost">
+      Hemmeligheden bag en fantastisk øl starter med de fire nøgleingredienser:
+      vand, malt, humle og gær. Det er her fundamentet skabes – malten giver
+      øllet fylde og sødme, humlen tilføjer bitterhed og aroma, gæren skaber
+      smag og de livlige bobler, og vandet binder det hele sammen med ren
+      friskhed.
+    </p>
+  </div>
+
+  <!-- Flex container for billeder -->
+  <div class="flex justify-center gap-8 mt-8">
+    <!-- Malt billede rykket ned med margin-top -->
+    <div class="relative">
+      <Image src={malt} alt="Malt" class="w-[200px] md:w-[300px]" />
+    </div>
+
+    <!-- Humle billede rykket op til at ramme kassen -->
+    <div class="relative -mt-12">
+      <Image src={hops} alt="Humle" class="w-[200px] md:w-[300px]" />
+    </div>
+  </div>
+</section>
+
+<div
+  class="bg-black p-6 rounded-[20px] mt-6"
+  style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+>
+  <h2 class="text-[36px] md:text-[64px] karantina font-bold text-[#BE7E39]">
+    Kreativitet <span class="text-white">og</span> eksperimenter
+  </h2>
+  <p class="text-white text-[16px] mt-[20px] jost">
+    Hemmeligheden bag en fantastisk øl starter med de fire nøgleingredienser:
+    vand, malt, humle og gær. Det er her fundamentet skabes – malten giver øllet
+    fylde og sødme, humlen tilføjer bitterhed og aroma, gæren skaber smag og de
+    livlige bobler, og vandet binder det hele sammen med ren friskhed.
+  </p>
+</div>
+<Image src={lemon} alt="Citroner" class="" />
+<Image src={appelsin} alt="Appelsiner" class="" />
+
+<section>
+  <Oplevelsecard />
+  <Footer />
 </section>

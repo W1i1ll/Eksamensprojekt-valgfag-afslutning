@@ -1,3 +1,69 @@
 ---
-
+import { Image } from "astro:assets";
+import apple from "../assets/images/apple.png";
+import google from "../assets/images/google.png";
+import master from "../assets/images/master.png";
+import visa from "../assets/images/visa.png";
+import union from "../assets/images/union.png";
+import facebook from "../assets/images/Facebook.svg";
+import instagram from "../assets/images/Instagram.svg";
 ---
+
+<footer class="bg-[#200C00] py-8">
+  <h1 class="text-white karantina text-[36px] text-center mb-2">MaltClub</h1>
+
+  <!-- Adresse sektion -->
+  <ul class="text-white text-left jost text-[18px] space-y-1 mx-16">
+    <li>Beershoppen</li>
+    <li>Gråbrødregade 13, 6000</li>
+    <li>Kolding, Danmark</li>
+  </ul>
+
+  <!-- Links sektion -->
+  <h1 class="text-white karantina text-[36px] text-center mt-10 mb-2">Links</h1>
+  <ul class="text-white text-left jost text-[18px] space-y-1 mx-16">
+    <li>Handelsbetingelser</li>
+    <li>Cookie - og privatlivspolitik</li>
+    <li>Persondatapolitik</li>
+    <li>Servicevilkår</li>
+  </ul>
+
+  <!-- Kontakt sektion -->
+  <h1 class="text-white karantina text-[36px] text-center mt-10 mb-2">
+    Kontakt
+  </h1>
+  <ul class="text-white text-left jost text-[18px] space-y-1 mx-16">
+    <li>
+      Telefon: <a href="tel:+4525766299" class="hover:text-[#BE7E39]"
+        >+45 25 76 62 99</a
+      >
+    </li>
+    <li>
+      Mail: <a
+        href="mailto:info.maltclub@gmail.com"
+        class="hover:text-[#BE7E39]">info.maltclub@gmail.com</a
+      >
+    </li>
+  </ul>
+
+  <!-- Følg os sektion -->
+  <h1 class="text-white karantina text-[36px] text-center mt-6">Følg os</h1>
+  <div class="flex justify-center items-center space-x-4 mb-6">
+    <Image src={facebook} alt="Facebook" class="w-[30px] h-[30px]" />
+    <Image src={instagram} alt="Instagram" class="w-[30px] h-[30px]" />
+  </div>
+
+  <!-- Betalingsikoner -->
+  <div class="flex justify-center items-center space-x-4 mb-10">
+    <Image src={apple} alt="Apple" class="w-auto h-[30px]" />
+    <Image src={google} alt="Google" class="w-auto h-[30px]" />
+    <Image src={master} alt="MasterCard" class="w-auto h-[30px]" />
+    <Image src={visa} alt="Visa" class="w-auto h-[30px]" />
+    <Image src={union} alt="UnionPay" class="w-auto h-[30px]" />
+  </div>
+
+  <!-- Copyright -->
+  <p class="text-white text-[18px] jost text-center">
+    Copyright © 2024, MaltClub
+  </p>
+</footer>

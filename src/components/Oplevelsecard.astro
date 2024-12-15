@@ -1,0 +1,27 @@
+---
+import logo from "../assets/images/logo.svg";
+import { Image } from "astro:assets";
+import baggrund from "../assets/images/cardbaggrund.jpg";
+---
+
+<div class="relative w-full h-[70vh]">
+  <Image src={baggrund} alt="Appelsiner" class="w-full h-full object-cover" />
+
+  <div
+    class="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4"
+  >
+    <h2 class="text-[36px] md:text-[64px] karantina font-bold">
+      Kom i gang med din øloplevelse
+    </h2>
+    <p class="text-[16px] md:text-[20px] jost max-w-[600px]">
+      Vælg dit MaltClub abonnement i dag og få adgang til nøje udvalgte
+      specialøl fra passionerede bryghuse.
+    </p>
+    <a
+      href="#"
+      class="karantina text-[24px] md:text-[28px] bg-[#A6411B] text-white px-6 py-3 rounded-[20px] hover:bg-[#8A3717]"
+    >
+      Se abonnementer
+    </a>
+  </div>
+</div>
