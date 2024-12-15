@@ -1,0 +1,65 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Oplevelsecard from "../components/Oplevelsecard.astro";
+import { Image } from "astro:assets";
+import ol1 from "../assets/images/ol1.webp";
+import ol2 from "../assets/images/ol2.webp";
+import ol3 from "../assets/images/ol3.webp";
+---
+
+<MainLayout title="MaltClub">
+  <Header />
+
+  <!-- Hero Sektion -->
+  <div class="relative w-full h-screen">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div
+      class="relative z-10 flex items-center justify-center text-white flex-col h-full"
+    >
+      <h1 class="text-[64px] font-bold text-center">
+        BRYGGET MED OMSORG <br /> LEVERET MED KÆRLIGHED
+      </h1>
+      <p class="text-[24px] text-center mt-4">
+        Unikke specialøl, der forvandler din hverdag til en smagsoplevelse
+      </p>
+      <a
+        href="#"
+        class="mt-6 bg-[#A6411B] text-white px-6 py-3 rounded-lg hover:bg-[#8A3717]"
+      >
+        Se abonnementer
+      </a>
+    </div>
+  </div>
+
+  <!-- Pakke Sektion -->
+  <section class="flex justify-center gap-10 mt-16">
+    <Oplevelsecard
+      title="Klassisk Maltclub pakke"
+      description="En nøje udvalgt samling af klassiske øl..."
+      image={ol1}
+    />
+    <Oplevelsecard
+      title="Maltclub XL pakke"
+      description="Den ultimative pakke til entusiasten..."
+      image={ol2}
+    />
+    <Oplevelsecard
+      title="Maltclub UDEN IPA pakke"
+      description="Til dig, der foretrækker blødere IPA'er..."
+      image={ol3}
+    />
+  </section>
+
+  <!-- Beskrivelse og Kvalitet Sektion -->
+  <section class="text-white text-center mt-20 p-8 bg-[#1A1A1A] rounded-lg">
+    <h2 class="text-[48px] font-bold">Kvalitet du kan stole på</h2>
+    <p class="mt-4 max-w-3xl mx-auto">
+      Hos MaltClub går vi aldrig på kompromis med kvaliteten. Hver eneste øl i
+      vores pakker er nøje udvalgt og testet for at sikre...
+    </p>
+  </section>
+
+  <Footer />
+</MainLayout>
