@@ -42,13 +42,14 @@ import boblermobil from "../assets/images/boblermobil.svg";
       <Image
         src={beer1}
         alt="En øl"
-        class="hidden md:block w-[190px] h-auto transform rotate-[-15deg]"
+        class="hidden md:block w-[190px] h-auto transform rotate-[-10deg] ml-5"
       />
       <!-- Flaske 2 -->
+
       <Image
         src={beer2}
         alt="En øl"
-        class="hidden md:block w-[140px] h-auto transform rotate-[15deg]"
+        class="hidden md:block w-[140px] h-auto transform rotate-[10deg] mr-10"
       />
     </div>
 
@@ -67,7 +68,7 @@ import boblermobil from "../assets/images/boblermobil.svg";
 
     <!-- Call-to-action knap -->
     <a
-      href="/src/pages/productchoose.astro"
+      href="/productchoose"
       class="karantina text-[32px] bg-[#A6411B] hover:bg-[#8A3717] text-white py-3 px-6 rounded-[20px] z-20 relative"
     >
       Se abonnementer
@@ -81,86 +82,101 @@ import boblermobil from "../assets/images/boblermobil.svg";
 </div>
 
 <!-- Passion for øl sektion -->
-<section class="p-2">
-  <Image src={passion} alt="En person skænker øl op" class="rounded-[20px]" />
+<section class="p-2 mt-10 md:mt-20 md:p-10">
+  <div class="relative">
+    <Image
+      src={passion}
+      alt="En person skænker øl op"
+      class="rounded-[20px] md:w-[817px] md:h-[693px] md:ml-auto"
+    />
 
-  <div
-    class="bg-black p-6 rounded-[20px] mt-6"
-    style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
-  >
-    <h2
-      class="text-[40px] md:text-[64px] karantina font-bold text-center text-white"
+    <div
+      class="bg-black text-white p-10 rounded-[20px] mt-6 md:absolute md:top-1/2 md:left-0 md:transform md:-translate-y-1/2 md:w-1/2 md:ml-4"
+      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
     >
-      En <span class="text-[#BE7E39]">passion</span> for øl
-    </h2>
-    <p class="text-white text-[16px] mt-[20px] jost">
-      Hos MaltClub er vi passionerede omkring at udbrede kendskabet til øl med
-      historie og smag. Hver måned sammensætter vi en kasse fyldt med nøje
-      udvalgte specialøl fra bryghuse med noget på hjertet. Øl, der ikke bare
-      smager godt – men også fortæller en historie. <br />
-      <br /> Er du klar til din næste smagsoplevelse?
-    </p>
+      <h2
+        class="text-[40px] ml-5 md:text-[64px] karantina font-bold text-center md:text-left"
+      >
+        En <span class="text-[#BE7E39]">passion</span> for øl
+      </h2>
+      <p class="text-[16px] ml-5 mt-[20px] jost">
+        Hos MaltClub er vi passionerede omkring at udbrede kendskabet til øl med
+        historie og smag. Hver måned sammensætter vi en kasse fyldt med nøje
+        udvalgte specialøl fra bryghuse med noget på hjertet. Øl, der ikke bare
+        smager godt – men også fortæller en historie. <br /><br />
+        Er du klar til din næste smagsoplevelse?
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- Trin sektion -->
 <section>
   <h2
-    class="text-[40px] m-10 md:text-[64px] karantina font-bold text-center text-white"
+    class="text-[40px] m-10 md:text-[64px] karantina font-bold text-center text-white md:mt-20"
   >
     Tre simple trin til fantastiske øl
   </h2>
 
-  <!-- Trin 1 -->
-  <div class="relative text-center max-w-[800px] mx-auto">
-    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">1</h3>
-    <Image
-      src={trin1}
-      alt="En computerskærm med indkøbskurv"
-      class="w-[80%] md:w-[50%] mx-auto"
-    />
-    <p
-      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
-    >
-      Vælg dit MaltCLub abonnement
-    </p>
-  </div>
+  <!-- Grid container -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20">
+    <!-- Trin 1 -->
+    <div class="relative text-center">
+      <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
+        1
+      </h3>
+      <Image
+        src={trin1}
+        alt="En computerskærm med indkøbskurv"
+        class="w-[80%] md:w-[100%] mx-auto"
+      />
+      <p
+        class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72 md:mt-80 md:text-[20px]"
+      >
+        Vælg dit MaltCLub abonnement
+      </p>
+    </div>
 
-  <!-- Trin 2 -->
-  <div class="relative text-center mt-8 max-w-[800px] mx-auto">
-    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">2</h3>
-    <Image
-      src={trin2}
-      alt="En lastbil der leverer øl"
-      class="w-[80%] md:w-[50%] mx-auto"
-    />
-    <p
-      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
-    >
-      Vi leverer direkte til døren
-    </p>
-  </div>
+    <!-- Trin 2 -->
+    <div class="relative text-center">
+      <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
+        2
+      </h3>
+      <Image
+        src={trin2}
+        alt="En lastbil der leverer øl"
+        class="w-[80%] md:w-[100%] mx-auto"
+      />
+      <p
+        class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72 md:mt-80 md:text-[20px]"
+      >
+        Vi leverer direkte til døren
+      </p>
+    </div>
 
-  <!-- Trin 3 -->
-  <div class="relative text-center mt-8 max-w-[800px] mx-auto">
-    <h3 class="text-[96px] md:text-[64px] karantina font-bold text-white">3</h3>
-    <Image
-      src={trin3}
-      alt="To øl glas der skåler"
-      class="w-[80%] md:w-[50%] mx-auto"
-    />
-    <p
-      class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72"
-    >
-      Nyd unikke øl i godt selskab
-    </p>
+    <!-- Trin 3 -->
+    <div class="relative text-center">
+      <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
+        3
+      </h3>
+      <Image
+        src={trin3}
+        alt="To øl glas der skåler"
+        class="w-[80%] md:w-[100%] mx-auto"
+      />
+      <p
+        class="absolute inset-0 text-white font-bold jost flex justify-center items-center mt-72 md:mt-80 md:text-[20px]"
+      >
+        Nyd unikke øl i godt selskab
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- Bobler -->
 <div class="relative">
   <!-- Desktop-bobler (vises kun på større skærme) -->
-  <Image src={boblerdesk} alt="Ølbobler" class="hidden md:block mx-auto" />
+  <Image src={boblerdesk} alt="Ølbobler" class="hidden md:block m-auto" />
 
   <!-- Mobil-bobler (vises kun på mobile skærme) -->
   <Image
