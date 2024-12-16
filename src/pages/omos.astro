@@ -1,0 +1,91 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import faelleskab from "../assets/images/faelleskab.png";
+import nydelse from "../assets/images/nydelse.png";
+import grainVideo from "../assets/videos/grain.mp4";
+---
+
+<MainLayout title="MaltClub - Fællesskab og Nydelse">
+  <Header />
+
+  <!-- Hero Sektion -->
+  <section
+    class="relative h-screen bg-cover bg-center text-white flex items-center justify-center"
+    style={`background-image: url(${faelleskab.src});`}
+  >
+    <div class="text-center px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">EN ØJEBLIK DER BETYDER MERE END BARE ØL</h1>
+    </div>
+  </section>
+
+  <!-- Passion Sektion -->
+  <section class="bg-[#141414] text-white py-12">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <img src={nydelse.src} alt="Nydelse" class="w-full object-cover rounded-lg" />
+      <div>
+        <h2 class="text-3xl font-bold mb-4">SKABT MED PASSION OG KÆRLIGHED</h2>
+        <p class="text-gray-300 leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur. Diam etiam convallis orci a sed duis elit venenatis.
+          Pulvinar amet ornare pulvinar vel. Vitae malesuada vivamus et sit ipsum quam pulvinar ut egestas.
+          Sed feugiat id suspendisse suspendisse nisl eu. 
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Sektion -->
+  <section class="bg-[#FAF8F4] text-black py-12">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">CRAFTED WITH A FOCUS ON TASTE AND SUSTAINABILITY</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Gennem hele brygningsprocessen er kvalitetskontrol en topprioritet, hvor hver batch øl nøje overvåges og testes
+          for at sikre, at den lever op til bryggeriets høje standarder for smag, aroma, konsistens og bæredygtighed.
+        </p>
+      </div>
+      <video autoplay muted loop class="rounded-lg w-full">
+        <source src={grainVideo} type="video/mp4" />
+        Din browser understøtter ikke videoafspilleren.
+      </video>
+    </div>
+  </section>
+
+  <!-- FAQ Sektion -->
+  <section class="bg-[#141414] text-white py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Ofte stillede spørgsmål</h2>
+      <div class="space-y-4 max-w-2xl mx-auto">
+        <!-- FAQ 1 -->
+        <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
+          <summary class="font-bold">Hvordan bestiller jeg et MaltClub abonnement?</summary>
+          <p class="text-gray-100 mt-2">Du kan bestille direkte via vores hjemmeside ved at vælge din ønskede pakke.</p>
+        </details>
+        <!-- FAQ 2 -->
+        <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
+          <summary class="font-bold">Hvor lang tid billeder jeg mig?</summary>
+          <p class="text-gray-100 mt-2">Leveringstiden afhænger af din lokation, men tager typisk 2-4 hverdage.</p>
+        </details>
+        <!-- FAQ 3 -->
+        <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
+          <summary class="font-bold">Hvor meget koster et MaltClub abonnement?</summary>
+          <p class="text-gray-100 mt-2">Prisen afhænger af den valgte pakke. Se vores priser under produkter.</p>
+        </details>
+        <!-- FAQ 4 -->
+        <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
+          <summary class="font-bold">Hvordan kan jeg betale på MaltClub?</summary>
+          <p class="text-gray-100 mt-2">Vi accepterer kortbetaling, MobilePay og PayPal.</p>
+        </details>
+        <!-- FAQ 5 -->
+        <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
+          <summary class="font-bold">Hvornår hæver I penge på min konto?</summary>
+          <p class="text-gray-100 mt-2">Beløbet trækkes på dagen for din bestilling.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
+</MainLayout>
