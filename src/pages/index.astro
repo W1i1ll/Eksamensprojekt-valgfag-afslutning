@@ -15,7 +15,7 @@ import trin3 from "../assets/images/trin3.svg";
 import malt from "../assets/images/malt.png";
 import hops from "../assets/images/hops.png";
 import lemon from "../assets/images/lemon.webp";
-import appelsin from "../assets/images/appelsin.png";
+import appelsin from "../assets/images/appelsin1.png";
 import boblerdesk from "../assets/images/boblerdesk.svg";
 import boblermobil from "../assets/images/boblermobil.svg";
 ---
@@ -42,14 +42,14 @@ import boblermobil from "../assets/images/boblermobil.svg";
       <Image
         src={beer1}
         alt="En øl"
-        class="hidden md:block w-[190px] h-auto transform rotate-[-10deg] ml-5"
+        class="md:block w-[90px] -mt-96 md:mt-0 md:w-[190px] h-auto transform rotate-[-10deg] md:ml-3"
       />
       <!-- Flaske 2 -->
 
       <Image
         src={beer2}
         alt="En øl"
-        class="hidden md:block w-[140px] h-auto transform rotate-[10deg] mr-10"
+        class="md:block w-[65px] -mt-96 md:mt-0 md:w-[140px] h-auto transform rotate-[10deg] md:mr-10"
       />
     </div>
 
@@ -91,7 +91,7 @@ import boblermobil from "../assets/images/boblermobil.svg";
     />
 
     <div
-      class="bg-black text-white p-10 rounded-[20px] mt-6 md:absolute md:top-1/2 md:left-0 md:transform md:-translate-y-1/2 md:w-1/2 md:ml-4"
+      class="bg-black text-white p-5 rounded-[20px] mt-6 md:absolute md:top-1/2 md:left-0 md:transform md:-translate-y-1/2 md:w-1/2 md:ml-4"
       style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
     >
       <h2
@@ -187,57 +187,82 @@ import boblermobil from "../assets/images/boblermobil.svg";
 </div>
 
 <section class="p-1">
-  <div
-    class="bg-black p-6 rounded-[20px] mt-6"
-    style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
-  >
-    <h2 class="text-[36px] md:text-[64px] karantina font-bold text-white">
-      De <span class="text-[#BE7E39]">fire</span> nøgleingredienser
-    </h2>
-    <p class="text-white text-[16px] mt-[20px] jost">
-      Hemmeligheden bag en fantastisk øl starter med de fire nøgleingredienser:
-      vand, malt, humle og gær. Det er her fundamentet skabes – malten giver
-      øllet fylde og sødme, humlen tilføjer bitterhed og aroma, gæren skaber
-      smag og de livlige bobler, og vandet binder det hele sammen med ren
-      friskhed.
-    </p>
-  </div>
-
-  <div class="flex justify-center gap-8 mt-8">
-    <div class="relative">
-      <Image src={malt} alt="Malt" class="w-[200px] md:w-[300px]" />
+  <div class="md:flex md:items-center md:gap-8">
+    <div
+      class="bg-black p-12 rounded-[20px] m-5 mt-6 md:w-1/2 md:m-20"
+      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+    >
+      <h2 class="text-[36px] md:text-[64px] karantina font-bold text-white">
+        De <span class="text-[#BE7E39]">fire</span> nøgleingredienser
+      </h2>
+      <p class="text-white text-[16px] mt-[20px] jost">
+        Hemmeligheden bag en fantastisk øl starter med de fire
+        nøgleingredienser: vand, malt, humle og gær. Det er her fundamentet
+        skabes – malten giver øllet fylde og sødme, humlen tilføjer bitterhed og
+        aroma, gæren skaber smag og de livlige bobler, og vandet binder det hele
+        sammen med ren friskhed.
+      </p>
     </div>
 
-    <div class="relative -mt-16">
-      <Image src={hops} alt="Humle" class="w-[200px] md:w-[300px]" />
+    <!-- Billeder -->
+    <div class="flex justify-center gap-8 md:flex-col md:gap-4 md:w-1/2">
+      <!-- Malt billede -->
+      <div class="relative md:-ml-60">
+        <Image
+          src={malt}
+          alt="Malt"
+          class="w-[200px] md:w-[590px] md:h-[440px]"
+        />
+      </div>
+
+      <!-- Humle billede -->
+      <div class="relative">
+        <Image
+          src={hops}
+          alt="Humle"
+          class="w-[200px] -mt-16 md:w-[665px] md:h-[500px]"
+        />
+      </div>
     </div>
   </div>
 </section>
 
-<div
-  class="bg-black p-6 rounded-[20px] mt-6"
-  style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
->
-  <h2 class="text-[36px] md:text-[64px] karantina font-bold text-[#BE7E39]">
-    Kreativitet <span class="text-white">og</span> eksperimenter
-  </h2>
-  <p class="text-white text-[16px] mt-[20px] jost">
-    Hemmeligheden bag en fantastisk øl starter med de fire nøgleingredienser:
-    vand, malt, humle og gær. Det er her fundamentet skabes – malten giver øllet
-    fylde og sødme, humlen tilføjer bitterhed og aroma, gæren skaber smag og de
-    livlige bobler, og vandet binder det hele sammen med ren friskhed.
-  </p>
-</div>
+<section>
+  <div class="flex flex-col md:flex-row md:items-center md:gap-8">
+    <div class="flex justify-center gap-8 mt-8 md:w-1/2 md:flex-col md:gap-4">
+      <!-- Appelsin billede -->
+      <div class="relative">
+        <Image src={appelsin} alt="Appelsiner" class="w-[206px] md:w-[571px]" />
+      </div>
 
-<div class="flex justify-center gap-8 mt-8">
-  <div class="relative">
-    <Image src={appelsin} alt="Appelsiner" class="w-[200px] md:w-[300px]" />
-  </div>
+      <!-- Citron billede -->
+      <div class="relative -mt-8">
+        <Image
+          src={lemon}
+          alt="Citroner"
+          class="w-[246px] md:w-[598px] md:ml-60 md:-mt-16"
+        />
+      </div>
+    </div>
 
-  <div class="relative -mt-16">
-    <Image src={lemon} alt="Citroner" class="w-[200px] md:w-[300px]" />
+    <div
+      class="bg-black p-6 rounded-[20px] mt-6 md:mt-0 md:w-1/2 md:m-20"
+      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+    >
+      <h2 class="text-[36px] md:text-[64px] karantina font-bold text-[#BE7E39]">
+        Kreativitet <span class="text-white">og</span> eksperimenter
+      </h2>
+      <p class="text-white text-[16px] mt-[20px] jost">
+        Men hos MaltClub stopper historien ikke her. Specialøl handler også om
+        kreativitet og modet til at gå ud over det traditionelle. Forestil dig
+        øl tilført tropiske frugter, friske bær, ristede kaffebønner eller
+        krydrede urter – ingredienser, der giver hver flaske sin helt egen
+        personlighed og historie. Det er denne blanding af håndværk og
+        innovation, der gør øloplevelserne i MaltClub-kasserne så unikke.
+      </p>
+    </div>
   </div>
-</div>
+</section>
 
 <section>
   <Oplevelsecard />
