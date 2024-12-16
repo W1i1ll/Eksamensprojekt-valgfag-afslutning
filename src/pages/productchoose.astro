@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Oplevelsecard from "../components/Oplevelsecard.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import { Image } from "astro:assets";
 import ol1 from "../assets/images/ol1.webp";
 import ol2 from "../assets/images/ol2.webp";
 import ol3 from "../assets/images/ol3.webp";
@@ -12,74 +11,74 @@ import ol3 from "../assets/images/ol3.webp";
 <MainLayout title="MaltClub - Valg af pakke">
   <Header />
 
-<!-- Valg af Pakke -->
-<section class="container mx-auto text-center py-12">
-	<h2 class="text-white text-4xl font-bold mb-12">Valg af pakke</h2>
-  
-	<!-- Grid Layout med centrering og tilpasning -->
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
-	  <!-- Pakke 1 -->
-	  <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
-		<img
-		  src="/path-to-images/ol1.webp"
-		  alt="Klassisk Maltclub pakke"
-		  class="w-full h-64 object-contain mb-6"
-		/>
-		<h3 class="text-2xl font-bold mb-4">Klassisk Maltclub pakke</h3>
-		<p class="text-gray-300 mb-6">
-		  En nøje udvalgt samling af klassiske øl, der byder på tidløse
-		  smagsoplevelser. Perfekt til dig, der elsker de traditionelle ølstile
-		  og vil udforske de mest populære varianter.
-		</p>
-		<button
-		  class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
-		>
-		  VÆLG
-		</button>
-	  </div>
-  
-	  <!-- Pakke 2 -->
-	  <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
-		<img
-		  src="/path-to-images/ol2.webp"
-		  alt="Maltclub XL pakke"
-		  class="w-full h-64 object-contain mb-6"
-		/>
-		<h3 class="text-2xl font-bold mb-4">Maltclub XL pakke</h3>
-		<p class="text-gray-300 mb-6">
-		  Den ultimative ølpakke til entusiasten! Få ekstra mange spændende øl,
-		  der spænder over et bredt udvalg af stilarter og smagsprofiler – ideel
-		  til dem, der ønsker en rig og varieret ølsmagning.
-		</p>
-		<button
-		  class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
-		>
-		  VÆLG
-		</button>
-	  </div>
-  
-	  <!-- Pakke 3 -->
-	  <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
-		<img
-		  src="/path-to-images/ol3.webp"
-		  alt="Maltclub UDEN IPA pakke"
-		  class="w-full h-64 object-contain mb-6"
-		/>
-		<h3 class="text-2xl font-bold mb-4">Maltclub UDEN IPA pakke</h3>
-		<p class="text-gray-300 mb-6">
-		  Til dig, der foretrækker øl uden den markante humlebitterhed fra
-		  IPA’er. Denne pakke fokuserer på blødere og mere balancerede øltyper,
-		  hvor andre smagsnuancer får lov at træde frem.
-		</p>
-		<button
-		  class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
-		>
-		  VÆLG
-		</button>
-	  </div>
-	</div>
+  <!-- Valg af Pakke -->
+  <section class="container mx-auto text-center py-12">
+    <h2 class="text-white text-4xl font-bold mb-12">Valg af pakke</h2>
+
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
+      <!-- Pakke 1 -->
+      <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
+        <img
+          src={ol1.src}
+          alt="Klassisk Maltclub pakke"
+          class="w-full h-64 object-contain mb-6"
+        />
+        <h3 class="text-2xl font-bold mb-4">Klassisk Maltclub pakke</h3>
+        <p class="text-gray-300 mb-6">
+          En nøje udvalgt samling af klassiske øl, der byder på tidløse
+          smagsoplevelser. Perfekt til dig, der elsker de traditionelle ølstile
+          og vil udforske de mest populære varianter.
+        </p>
+        <button
+          class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
+        >
+          VÆLG
+        </button>
+      </div>
+
+      <!-- Pakke 2 -->
+      <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
+        <img
+          src={ol2.src}
+          alt="Maltclub XL pakke"
+          class="w-full h-64 object-contain mb-6"
+        />
+        <h3 class="text-2xl font-bold mb-4">Maltclub XL pakke</h3>
+        <p class="text-gray-300 mb-6">
+          Den ultimative ølpakke til entusiasten! Få ekstra mange spændende øl,
+          der spænder over et bredt udvalg af stilarter og smagsprofiler – ideel
+          til dem, der ønsker en rig og varieret ølsmagning.
+        </p>
+        <button
+          class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
+        >
+          VÆLG
+        </button>
+      </div>
+
+      <!-- Pakke 3 -->
+      <div class="border border-gray-700 p-6 bg-[#141414] text-white rounded-lg">
+        <img
+          src={ol3.src}
+          alt="Maltclub UDEN IPA pakke"
+          class="w-full h-64 object-contain mb-6"
+        />
+        <h3 class="text-2xl font-bold mb-4">Maltclub UDEN IPA pakke</h3>
+        <p class="text-gray-300 mb-6">
+          Til dig, der foretrækker øl uden den markante humlebitterhed fra
+          IPA’er. Denne pakke fokuserer på blødere og mere balancerede øltyper,
+          hvor andre smagsnuancer får lov at træde frem.
+        </p>
+        <button
+          class="bg-[#F59E0B] text-black font-bold py-2 px-6 rounded-md hover:bg-[#D97706]"
+        >
+          VÆLG
+        </button>
+      </div>
+    </div>
   </section>
-  
+
   <!-- Kvalitet Sektion -->
   <section class="bg-[#1A1A1A] text-white text-center py-12 px-6">
     <h2 class="text-4xl font-bold mb-6">Kvalitet du kan stole på</h2>
