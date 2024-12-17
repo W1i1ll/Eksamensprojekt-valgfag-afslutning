@@ -4,6 +4,10 @@ import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import kasse from "../assets/images/kasse.jpg";
 import Oplevelsecard from "../components/Oplevelsecard.astro";
+import anarchy from "../assets/images/anarchy.png";
+import ol1 from "../assets/images/ol1.webp";
+import amundsen from "../assets/images/amundsen.webp";
+import ol2 from "../assets/images/ol2.webp";
 ---
 
 <MainLayout />
@@ -15,15 +19,15 @@ import Oplevelsecard from "../components/Oplevelsecard.astro";
       class="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="absolute inset-0 bg-black opacity-40"></div>
 
     <div
       class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white"
     >
-      <h1 class="karantina text-[45px] md:text-[128px] font-bold mb-4">
+      <h1 class="karantina text-[50px] md:text-[128px] font-bold mb-4">
         Opdag øllet i din MaltClub kasse
       </h1>
-      <h2 class="karantina text-[24px] md:text-[40px] font-semibold mx-16">
+      <h2 class="karantina text-[24px] md:text-[40px] font-semibold mx-6">
         Vi sammensætter månedlige ølpakker med øl, der matcher både årstiden og
         din smag
       </h2>
@@ -31,21 +35,213 @@ import Oplevelsecard from "../components/Oplevelsecard.astro";
   </div>
 </section>
 
-<section>
+<section class="md:p-10">
   <h1
     class="text-[40px] text-center mt-10 mb-4 md:text-[64px] karantina font-bold text-white"
   >
     Hvad kan du forvente?
   </h1>
-  <p class="text-white jost mx-16">
+  <p
+    class="text-white jost text-[16px] mx-16 md:mx-auto mb-32 max-w-[800px] px-4 md:px-0"
+  >
     Hver måned sammensætter vi din ølpakke med omhu, så du får en varieret
     samling af kvalitetsøl, der matcher både årstiden og særlige
     bryggetraditioner. Øllene i kassen spænder bredt, fra friske IPA'er og lyse
     pilsnere til mørkere stouts og saison. Vi sørger for, at hver øl fortæller
-    sin egen historie og giver dig en unik smagsoplevelse. Her er et udvalg af
-    de øl, du kan evt. kan heldig at finde i vores MaltClub kasser.
+    sin egen historie og giver dig en unik smagsoplevelse. <br />
+    <br />Her er et udvalg af de øl, du kan evt. kan heldig at finde i vores
+    MaltClub kasser.
   </p>
 </section>
+
+<section class="">
+  <div class="bg-[#BE7E39] pb-10 relative">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 items-center px-8 md:px-16 relative"
+    >
+      <div
+        class="relative flex justify-center items-center mt-[-40px] md:mt-0 md:hidden"
+      >
+        <Image src={anarchy} alt="" class="w-40" />
+      </div>
+
+      <div class="md:text-left md:pr-8 md:col-span-1">
+        <h1
+          class="text-center md:text-left karantina text-[33px] md:text-[40px]"
+        >
+          Anarchy Brew Co., New Age Crisis
+        </h1>
+        <p class="jost text-[16px] mt-4">
+          En session IPA lavet med El Dorado, Centennial, Columbus og Azzacca
+          humle fra det engelske bryghus Anarchy Brew Co. Øllen bærer præg af
+          moden tropisk frugt og giver en glat cremet følelse i munden.
+          Eftersmagen er let bitter.
+        </p>
+      </div>
+
+      <div
+        class="relative justify-center items-center hidden md:flex md:mt-[-70px] md:col-span-1"
+      >
+        <Image src={anarchy} alt="" class="w-40" />
+      </div>
+
+      <div class="text-center md:text-left md:col-span-1 md:pl-8 mt-6 md:mt-0">
+        <ul class="font-bold jost text-[16px] md:text-[18px] space-y-4">
+          <li>Land: England</li>
+          <li>Bryggeri: Anarchy Brew Co.</li>
+          <li>Type: Session IPA</li>
+          <li>Alkoholprocent: 4,8%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-40">
+  <div class="bg-[#BE7E39] relative">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center px-8 md:px-16">
+      <!-- Kolonne 1: Billede til mobil, skjult på desktop -->
+      <div
+        class="relative flex justify-center items-center mt-[-40px] md:mt-0 md:hidden"
+      >
+        <Image src={ol1} alt="" class="w-96" />
+      </div>
+
+      <!-- Kolonne 2: H1 og P (Venstre side på desktop, centreret på mobil) -->
+      <div class="md:text-left md:pr-8 md:col-span-1">
+        <h1
+          class="text-center md:text-left karantina text-[33px] md:text-[40px]"
+        >
+          Amager Bryghus, Hr. Frederiksen
+        </h1>
+        <p class="jost text-[16px] mt-4">
+          En potent øl med stor personlighed fra Amager Bryghus med masser af
+          brændt malt og karakteristisk bitterhed. Øllen består af hele 8
+          forskellige typer malt som giver øllen den mørke farve og eksteme
+          fylde. Øllen bør nydes langsomt og kan sagtens erstatte et godt måltid
+          mad. Hr. Frederiksen er opkaldt efter en ven af huset hos Amager
+          Bryghus.
+        </p>
+      </div>
+
+      <!-- Kolonne 3: Billede til desktop, skjult på mobil -->
+      <div
+        class="relative justify-center items-center hidden md:flex md:mt-[-70px] md:col-span-1"
+      >
+        <Image src={ol1} alt="" class="w-[10000px]" />
+      </div>
+
+      <!-- Kolonne 4: Liste (Højre side på desktop, nederst på mobil) -->
+      <div
+        class="text-center md:text-left md:pl-8 mt-6 md:mt-0 md:col-span-1 md:pb-0 pb-10"
+      >
+        <ul class="font-bold jost text-[16px] md:text-[18px] space-y-4">
+          <li>Land: Danmark</li>
+          <li>Bryggeri: Amager Bryghus</li>
+          <li>Type: Imperial Stout</li>
+          <li>Alkoholprocent: 10,5%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-40">
+  <div class="bg-[#BE7E39] relative mb-20 pt-10 pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center px-8 md:px-16">
+      <!-- Kolonne 1: Billede til mobil, skjult på desktop -->
+      <div
+        class="relative flex justify-center items-center mt-[-40px] md:mt-0 md:hidden"
+      >
+        <Image src={amundsen} alt="" class="w-40" />
+      </div>
+
+      <!-- Kolonne 2: H1 og P (Venstre side på desktop, centreret på mobil) -->
+      <div class="md:text-left md:pr-8 md:col-span-1">
+        <h1
+          class="text-center md:text-left karantina text-[33px] md:text-[40px]"
+        >
+          Amundsen, Apocalyptic Thunder Juicen
+        </h1>
+        <p class="jost text-[16px] mt-4">
+          En virkelig potent og frisk double dryhopped new englang IPA fra
+          norske Amundsen. Tropisk sød frugtagtig smag med toner af ananas,
+          appelsin, mango og melon med en bitter finish. Amundsen har brygget
+          øllen med tanke på at i tilfælde af en apokalypse, ville dette være
+          dit valg som en sidste øl - deraf den bizare etiket og ikke mindst
+          navn på denne øl.
+        </p>
+      </div>
+
+      <!-- Kolonne 3: Billede til desktop, skjult på mobil -->
+      <div
+        class="relative justify-center items-center hidden md:flex md:mt-[-70px] md:col-span-1"
+      >
+        <Image src={amundsen} alt="" class="w-40 md:mb-5" />
+      </div>
+
+      <!-- Kolonne 4: Liste (Højre side på desktop, nederst på mobil) -->
+      <div
+        class="text-center md:text-left md:pl-8 mt-6 md:mt-0 md:col-span-1 md:pb-0 pb-10"
+      >
+        <ul class="font-bold jost text-[16px] md:text-[18px] space-y-4">
+          <li>Land: Norge</li>
+          <li>Bryggeri: Amundsen</li>
+          <li>Type: New England IPA</li>
+          <li>Alkoholprocent: 6,5%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-40">
+  <div class="bg-[#BE7E39] relative">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center px-8 md:px-16">
+      <!-- Kolonne 1: Billede til mobil, skjult på desktop -->
+      <div
+        class="relative flex justify-center items-center mt-[-40px] md:mt-0 md:hidden"
+      >
+        <Image src={ol2} alt="" class="w-40" />
+      </div>
+
+      <!-- Kolonne 2: H1 og P (Venstre side på desktop, centreret på mobil) -->
+      <div class="md:text-left md:pr-8 md:col-span-1">
+        <h1
+          class="text-center md:text-left karantina text-[33px] md:text-[40px]"
+        >
+          Åben Coast To Coast / Mikkeller
+        </h1>
+        <p class="jost text-[16px] mt-4">
+          Fantastisk samarbejde mellem de to danske bryggerier Åben og
+          Mikkeller. En øl med en frisk og frugtagtig smag som er brygget
+          udelukkende på New Zealandske humle i form af Nectaron, Riwaka og
+          Rakau.
+        </p>
+      </div>
+
+      <!-- Kolonne 3: Billede til desktop, skjult på mobil -->
+      <div
+        class="relative justify-center items-center hidden md:flex md:mt-[-70px] md:col-span-1"
+      >
+        <Image src={ol2} alt="" class="w-52" />
+      </div>
+
+      <!-- Kolonne 4: Liste (Højre side på desktop, nederst på mobil) -->
+      <div
+        class="text-center md:text-left md:pl-8 mt-6 md:mt-0 md:col-span-1 md:pb-0 pb-10"
+      >
+        <ul class="font-bold jost text-[16px] md:text-[18px] space-y-4">
+          <li>Land: Danmark</li>
+          <li>Bryggeri: Åben og Mikkeller</li>
+          <li>Type: Session IPA</li>
+          <li>Alkoholprocent: 7,1%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section>
   <Oplevelsecard />
   <Footer />
