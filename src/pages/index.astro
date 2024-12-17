@@ -21,6 +21,59 @@ import boblermobil from "../assets/images/boblermobil.svg";
 ---
 
 <MainLayout title="MaltClub" />
+
+<section>
+  <!-- Popup  -->
+  <div
+    id="popup"
+    class="fixed left-0 top-2/4 transform -translate-x-full bg-black bg-opacity-90 text-white p-6 rounded-lg shadow-lg transition-transform duration-500 ease-in-out z-50 w-[90%] sm:w-[350px] md:w-[450px] lg:w-[500px]"
+  >
+    <!-- Luk-knap -->
+    <button
+      id="close-btn"
+      class="absolute top-4 right-4 text-white text-2xl"
+      aria-label="Luk"
+    >
+      &times;
+    </button>
+
+    <!-- Indhold -->
+    <div class="space-y-4">
+      <!-- Overskrift -->
+      <h2 class="karantina text-[32px] sm:text-[28px] md:text-[36px] font-bold">
+        Skål for rabatten!
+      </h2>
+      <!-- Undertekst -->
+      <p class="text-[16px] sm:text-[14px] jost">
+        Tilmeld dig vores nyhedsbrev og spar 20% på første måned
+      </p>
+
+      <!-- Email Form -->
+      <form
+        id="newsletter-form"
+        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2"
+      >
+        <!-- Justeret inputfelt -->
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          class="jost w-full sm:w-3/4 h-14 p-4 rounded-[5px] bg-[#BE7E39] text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#BE7E39] border border-transparent"
+          required
+        />
+
+        <!-- Justeret knap -->
+        <button
+          type="submit"
+          class="karantina w-full sm:w-1/4 h-14 bg-[#A6411B] hover:bg-[#8A3717] text-white text-[20px] sm:text-[24px] font-semibold rounded-[10px]"
+        >
+          Tilmeld
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <div class="relative w-full h-screen">
   <video
     src={herovideo}
@@ -42,14 +95,13 @@ import boblermobil from "../assets/images/boblermobil.svg";
       <Image
         src={beer1}
         alt="En øl"
-        class="md:block w-[90px] -mt-96 md:mt-0 md:w-[190px] h-auto transform rotate-[-10deg] md:ml-3"
+        class="md:block w-[90px] -mt-96 md:mt-0 md:w-[200px] h-auto transform rotate-[-10deg] md:ml-3 floating-beer-1"
       />
       <!-- Flaske 2 -->
-
       <Image
         src={beer2}
         alt="En øl"
-        class="md:block w-[65px] -mt-96 md:mt-0 md:w-[140px] h-auto transform rotate-[10deg] md:mr-10"
+        class="md:block w-[65px] -mt-96 md:mt-0 md:w-[140px] h-auto transform rotate-[10deg] md:mr-10 floating-beer-2"
       />
     </div>
 
@@ -77,22 +129,25 @@ import boblermobil from "../assets/images/boblermobil.svg";
 
   <!-- Scroll-pil -->
   <div class="absolute bottom-4 left-0 right-0 flex justify-center">
-    <a href="#next-section" class="text-white text-3xl animate-bounce"> ↓ </a>
+    <a href="#next-section" class="text-white text-5xl animate-bounce"> ↓ </a>
   </div>
 </div>
 
 <!-- Passion for øl sektion -->
-<section class="p-2 mt-10 md:mt-20 md:p-10">
+<section class="relative p-2 mt-10 md:mt-20 md:p-10">
   <div class="relative">
+    <!-- Billede -->
     <Image
       src={passion}
       alt="En person skænker øl op"
-      class="rounded-[20px] md:w-[817px] md:h-[693px] md:ml-auto"
+      class="rounded-[20px] w-auto h-[303px] md:w-[817px] md:h-[600px] md:ml-auto"
     />
 
+    <!-- Boks med tekst -->
     <div
-      class="bg-black text-white p-5 rounded-[20px] mt-6 md:absolute md:top-1/2 md:left-0 md:transform md:-translate-y-1/2 md:w-1/2 md:ml-4"
-      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+      id="parallax-box"
+      class="bg-black text-white p-5 rounded-[20px] mt-6 md:absolute md:left-0 md:w-1/2 md:ml-4"
+      style="box-shadow: -10px 10px 20px rgba(0, 0, 0, 1); position: absolute; top: 50%; transform: translateY(-50%); transition: transform 0.1s ease-out;"
     >
       <h2
         class="text-[40px] ml-5 md:text-[64px] karantina font-bold text-center md:text-left"
@@ -119,9 +174,12 @@ import boblermobil from "../assets/images/boblermobil.svg";
   </h2>
 
   <!-- Grid container -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20">
+  <ul
+    id="stagger"
+    class="staggeranimation grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-20"
+  >
     <!-- Trin 1 -->
-    <div class="relative text-center">
+    <li class="relative text-center opacity-0">
       <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
         1
       </h3>
@@ -135,10 +193,10 @@ import boblermobil from "../assets/images/boblermobil.svg";
       >
         Vælg dit MaltCLub abonnement
       </p>
-    </div>
+    </li>
 
     <!-- Trin 2 -->
-    <div class="relative text-center">
+    <li class="relative text-center opacity-0">
       <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
         2
       </h3>
@@ -152,10 +210,10 @@ import boblermobil from "../assets/images/boblermobil.svg";
       >
         Vi leverer direkte til døren
       </p>
-    </div>
+    </li>
 
     <!-- Trin 3 -->
-    <div class="relative text-center">
+    <li class="relative text-center opacity-0">
       <h3 class="text-[96px] md:text-[128px] karantina font-bold text-white">
         3
       </h3>
@@ -169,20 +227,24 @@ import boblermobil from "../assets/images/boblermobil.svg";
       >
         Nyd unikke øl i godt selskab
       </p>
-    </div>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <!-- Bobler -->
 <div class="relative">
   <!-- Desktop-bobler (vises kun på større skærme) -->
-  <Image src={boblerdesk} alt="Ølbobler" class="hidden md:block m-auto" />
+  <Image
+    src={boblerdesk}
+    alt="Ølbobler"
+    class="hidden md:block m-auto animate-float"
+  />
 
   <!-- Mobil-bobler (vises kun på mobile skærme) -->
   <Image
     src={boblermobil}
     alt="Ølbobler"
-    class="block md:hidden mx-auto mt-10"
+    class="block md:hidden mx-auto mt-10 animate-float"
   />
 </div>
 
@@ -229,24 +291,25 @@ import boblermobil from "../assets/images/boblermobil.svg";
 
 <section>
   <div class="flex flex-col md:flex-row md:items-center md:gap-8">
+    <!-- Øverste billeder (Desktop) -->
     <div class="flex justify-center gap-8 mt-8 md:w-1/2 md:flex-col md:gap-4">
-      <!-- Appelsin billede -->
-      <div class="relative">
-        <Image src={appelsin} alt="Appelsiner" class="w-[206px] md:w-[571px]" />
+      <!-- Appelsin billede  desktop -->
+      <div class="relative hidden md:block">
+        <Image src={appelsin} alt="Appelsiner" class="w-[571px]" />
       </div>
 
-      <!-- Citron billede -->
-      <div class="relative -mt-8">
+      <!-- Citron billede / desktop -->
+      <div class="relative -mt-8 hidden md:block">
         <Image
           src={lemon}
           alt="Citroner"
-          class="w-[246px] md:w-[598px] md:ml-60 md:-mt-16"
+          class="w-[598px] md:ml-60 md:-mt-16"
         />
       </div>
     </div>
 
     <div
-      class="bg-black p-6 rounded-[20px] mt-6 md:mt-0 md:w-1/2 md:m-20"
+      class="bg-black md:p-7 p-12 rounded-[20px] mt-6 md:mt-0 md:w-1/2 md:m-20"
       style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
     >
       <h2 class="text-[36px] md:text-[64px] karantina font-bold text-[#BE7E39]">
@@ -261,6 +324,18 @@ import boblermobil from "../assets/images/boblermobil.svg";
         innovation, der gør øloplevelserne i MaltClub-kasserne så unikke.
       </p>
     </div>
+
+    <div class="flex md:hidden gap-8 justify-center mt-8">
+      <!-- Appelsin billede / mobil -->
+      <div class="relative w-1/2">
+        <Image src={appelsin} alt="Appelsiner" class="w-[206px]" />
+      </div>
+
+      <!-- Citron billede / mobil -->
+      <div class="relative w-1/2">
+        <Image src={lemon} alt="Citroner" class="w-[246px] -mt-12" />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -268,3 +343,80 @@ import boblermobil from "../assets/images/boblermobil.svg";
   <Oplevelsecard />
   <Footer />
 </section>
+
+<style>
+  /* CSS Animation for floating beer bottles */
+  @keyframes float-1 {
+    0% {
+      transform: translateY(0) translateX(0) rotate(-10deg);
+    }
+    50% {
+      transform: translateY(-10px) translateX(5px) rotate(-5deg);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(-10deg);
+    }
+  }
+
+  @keyframes float-2 {
+    0% {
+      transform: translateY(0) translateX(0) rotate(10deg);
+    }
+    50% {
+      transform: translateY(10px) translateX(-5px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0) translateX(0) rotate(10deg);
+    }
+  }
+
+  /* Apply floating effect to beer bottles */
+  .floating-beer-1 {
+    animation: float-1 3s ease-in-out infinite;
+  }
+
+  .floating-beer-2 {
+    animation: float-2 3s ease-in-out infinite;
+  }
+</style>
+
+<script>
+  window.onload = () => {
+    setTimeout(() => {
+      document.getElementById("popup").classList.remove("-translate-x-full");
+    }, 3000); // Viser popup efter 3 sekunder
+  };
+
+  // Luk-popup funktion
+  document.getElementById("close-btn").onclick = () => {
+    document.getElementById("popup").classList.add("-translate-x-full");
+  };
+
+  // Når dokumentet er klar
+  document.addEventListener("DOMContentLoaded", function () {
+    const parallaxBox = document.getElementById("parallax-box");
+
+    // Funktion til at opdatere positionen af boksen ved scroll
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      // Juster hvor meget boksen bevæger sig over billedet baseret på scroll-position
+      // Parallax-effekten - skaber bevægelse over billedet
+      parallaxBox.style.transform = `translateY(${scrollPosition * -0.3}px)`;
+    });
+  });
+
+  import { inView, animate, stagger } from "motion";
+
+  // Når elementet er i viewport
+  inView("#stagger", () => {
+    animate(
+      ".staggeranimation li",
+      { opacity: [0, 1], transform: ["translateY(50px)", "translateY(0)"] },
+      {
+        delay: stagger(1, { start: 1 }), // Forsinkelse mellem hver li
+        duration: 1, // Varighed af animation
+        easing: "ease-out",
+      }
+    );
+  });
+</script>
