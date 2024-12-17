@@ -9,27 +9,41 @@ import ol1 from "../assets/images/ol1.webp";
   <Header />
 
   <!-- XL Pakke Sektion -->
-  <section class="bg-[#141414] text-white py-12">
-    <div class="container mx-auto px-4 md:px-0 text-center">
-      <h2 class="text-[#F59E0B] font-bold text-xl mb-4">VORES #1 TOP SELLER</h2>
-      <h1 class="text-4xl karantina font-bold mb-6">Maltclub XL pakke</h1>
-      <p class="text-gray-300 max-w-xl mx-auto mb-6 leading-relaxed">
-        Ølkassen består af 5-6 kvalitetsøl, som du højst sandsynligt ikke finder i dit lokale supermarked. Vi sætter en ære i at håndplukke øl til dig, så det passer til både årstiden og højtider.
-      </p>
-      <div class="flex justify-center gap-4 mb-6">
-        <img
-          src={ol1.src} alt="Flaske 1" class="w-24 md:w-36 object-contain" />
+  <section class="bg-[#28272E] text-white py-12">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-0">
+      <!-- Flaske billede -->
+      <div class="flex-shrink-0">
+        <img 
+          src={ol1.src} 
+          alt="Flaske" 
+          class="w-36 md:w-40 lg:w-48 object-contain" 
+        />
       </div>
-      <div class="flex justify-center gap-4">
-        <button class="bg-[#E5532C] hover:bg-[#C2411B] text-white py-2 px-6 rounded-md font-bold">
-          Bestil nu
-        </button>
-        <button class="bg-[#F59E0B] hover:bg-[#D97706] text-black py-2 px-6 rounded-md font-bold">
-          Køb som gave
-        </button>
+      <!-- Tekst og knapper -->
+      <div class="text-left max-w-lg">
+        <h2 class="text-[#B8773B] font-bold text-lg md:text-xl mb-2 uppercase">
+          Vores #1 Top Seller
+        </h2>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+          Maltclub XL pakke
+        </h1>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Ølkassen består af 5-6 kvalitetsøl, som du højst sandsynligt ikke finder i dit lokale supermarked. 
+          Vi sætter en ære i at håndplukke øl til dig, så det passer til både årstiden og højtider. 
+          Kassen består af forskellige typer af øl, sat sammen med respekt for håndværket og den gode historie bag øllen.
+        </p>
+        <div class="flex gap-4">
+          <button class="bg-[#9C5032] hover:bg-[#7A3C25] text-white py-3 px-6 rounded-md font-bold">
+            Bestil nu
+          </button>
+          <button class="bg-[#C89655] hover:bg-[#A9793F] text-black py-3 px-6 rounded-md font-bold">
+            Køb som gave
+          </button>
+        </div>
       </div>
     </div>
   </section>
+  
 
   <!-- Statistik Sektion -->
   <section class="bg-[#C47C35] text-black py-8">
@@ -59,28 +73,28 @@ import ol1 from "../assets/images/ol1.webp";
       <h2 class="text-center text-3xl font-bold mb-8">HVAD SYNES DE ANDRE OM DET</h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Anmeldelse 1 -->
-        <div class="bg-[#FAF8F4] text-black p-6 rounded-lg">
+        <div class="bg-[#EDE7DD] text-black p-6 rounded-lg">
           <h3 class="font-bold">William D. Birch</h3>
           <p class="text-sm font-semibold mb-2">Bedste beslutning i mit liv!</p>
           <p>⭐⭐⭐⭐⭐</p>
           <p class="text-gray-500 mt-2">Blædetekst her skriver de om deres oplevelser...</p>
         </div>
         <!-- Anmeldelse 2 -->
-        <div class="bg-[#FAF8F4] text-black p-6 rounded-lg">
+        <div class="bg-[#EDE7DD] text-black p-6 rounded-lg">
           <h3 class="font-bold">Anniken B.</h3>
           <p class="text-sm font-semibold mb-2">Rigtig god oplevelse</p>
           <p>⭐⭐⭐⭐⭐</p>
           <p class="text-gray-500 mt-2">Blædetekst her skriver de om deres oplevelser...</p>
         </div>
         <!-- Anmeldelse 3 -->
-        <div class="bg-[#FAF8F4] text-black p-6 rounded-lg">
+        <div class="bg-[#EDE7DD] text-black p-6 rounded-lg">
           <h3 class="font-bold">Louise Geers</h3>
           <p class="text-sm font-semibold mb-2">Virkelig god øl</p>
           <p>⭐⭐⭐⭐⭐</p>
           <p class="text-gray-500 mt-2">Blædetekst her skriver de om deres oplevelser...</p>
         </div>
         <!-- Anmeldelse 4 -->
-        <div class="bg-[#FAF8F4] text-black p-6 rounded-lg">
+        <div class="bg-[#EDE7DD] text-black p-6 rounded-lg">
           <h3 class="font-bold">Naja Heggum</h3>
           <p class="text-sm font-semibold mb-2">Bedste kvalitet</p>
           <p>⭐⭐⭐⭐⭐</p>
