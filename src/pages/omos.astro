@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import faelleskab from "../assets/images/faelleskab.png";
 import nydelse from "../assets/images/nydelse.png";
-import grainVideo from "../assets/videos/grain.mp4";
+import grain from "../assets/videos/grain.mp4";
 ---
 
 <MainLayout title="MaltClub - Fællesskab og Nydelse">
@@ -20,16 +20,24 @@ import grainVideo from "../assets/videos/grain.mp4";
     </div>
   </section>
 
-  <!-- Passion Sektion -->
-  <section class="bg-[#141414] text-white py-12">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <img src={nydelse.src} alt="Nydelse" class="w-full object-cover rounded-lg" />
-      <div>
-        <h2 class="text-3xl font-bold mb-4">SKABT MED PASSION OG KÆRLIGHED</h2>
-        <p class="text-gray-300 leading-relaxed">
+<!-- Passion Sektion -->
+<section class="bg-[#141414] text-white py-12">
+    <div class="container mx-auto flex items-center justify-between gap-8">
+      <!-- Venstre sektion med titel -->
+      <div class="w-1/3 text-left">
+        <h2 class="text-3xl font-bold mb-4 leading-tight">SKABT MED PASSION OG KÆRLIGHED</h2>
+      </div>
+      <!-- Billede i midten -->
+      <div class="w-1/3 flex justify-center">
+        <img src={nydelse.src} alt="Nydelse" class="w-full object-cover rounded-lg" />
+      </div>
+      <!-- Tekst til højre -->
+      <div class="w-1/3 text-gray-300 leading-relaxed">
+        <p>
           Lorem ipsum dolor sit amet consectetur. Diam etiam convallis orci a sed duis elit venenatis.
           Pulvinar amet ornare pulvinar vel. Vitae malesuada vivamus et sit ipsum quam pulvinar ut egestas.
-          Sed feugiat id suspendisse suspendisse nisl eu. 
+          Sed feugiat id suspendisse suspendisse nisl eu. Tortor amet purus turpis eget. 
+          Egestas ut non semper tempor diam tellus quis mattis mi.
         </p>
       </div>
     </div>
@@ -45,10 +53,12 @@ import grainVideo from "../assets/videos/grain.mp4";
           for at sikre, at den lever op til bryggeriets høje standarder for smag, aroma, konsistens og bæredygtighed.
         </p>
       </div>
-      <video autoplay muted loop class="rounded-lg w-full">
-        <source src={grainVideo} type="video/mp4" />
-        Din browser understøtter ikke videoafspilleren.
-      </video>
+      <video
+      src={grain}
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay
+      muted
+      loop></video>
     </div>
   </section>
 
