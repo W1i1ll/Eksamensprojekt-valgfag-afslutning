@@ -11,68 +11,82 @@ import grain from "../assets/images/grain.mp4";
   <Header />
 
   <!-- Hero Sektion -->
- <img
-  src={faelleskab.src}
-  alt="Background Image"
-  class="h-screen w-full object-cover"
-/>
-<div class="absolute top-0 left-0 w-full h-screen flex items-center justify-center karantina text-8xl text-white">
-  ET ØJEBLIK DER BETYDER MERE END BARE ØL
-</div>
+  <img
+    src={faelleskab.src}
+    alt="Background Image"
+    class="h-screen w-full object-cover"
+  />
+  <div
+    class="absolute top-0 left-0 w-full h-screen flex items-center justify-center karantina text-8xl text-white"
+  >
+    ET ØJEBLIK DER BETYDER MERE END BARE ØL
+  </div>
 
-
-<!-- Passion Sektion -->
-<section class="bg-[#141414] text-white py-12">
+  <!-- Passion Sektion -->
+  <section class="bg-[#141414] text-white py-12">
     <div class="container mx-auto flex items-center justify-between gap-8">
       <!-- Venstre sektion med titel -->
       <div class="w-1/3 text-left">
-        <h2 class="text-4xl font-bold mb-4 karantina leading-tight">SKABT MED PASSION OG KÆRLIGHED</h2>
+        <h2 class="text-4xl font-bold mb-4 karantina leading-tight">
+          SKABT MED PASSION OG KÆRLIGHED
+        </h2>
       </div>
       <!-- Billede i midten -->
       <div class="w-1/3 flex justify-center">
-        <img src={nydelse.src} alt="Nydelse" class="w-full object-cover rounded-lg" />
+        <img
+          src={nydelse.src}
+          alt="Nydelse"
+          class="w-full object-cover rounded-lg"
+        />
       </div>
       <!-- Tekst til højre -->
       <div class="w-1/3 text-gray-100 jost leading-relaxed">
         <p>
-            Hos MaltClub er vi på en mission. Vi ønsker at fremme kendskabet til kvalitetsøl fra bryghuse med en unik historie. 
-            Vi brænder for at dele fortællingen om både øl og bryghuse – både fra Danmark og internationalt – og er overbeviste om, at dette kan vække dine smagsløg. 
-            Øl med en god historie smager altid bedre.
+          Hos MaltClub er vi på en mission. Vi ønsker at fremme kendskabet til
+          kvalitetsøl fra bryghuse med en unik historie. Vi brænder for at dele
+          fortællingen om både øl og bryghuse – både fra Danmark og
+          internationalt – og er overbeviste om, at dette kan vække dine
+          smagsløg. Øl med en god historie smager altid bedre.
         </p>
       </div>
     </div>
   </section>
 
-<!-- Video Sektion med tekst-overlay -->
-<section class="relative bg-[#FAF8F4] text-white py-0 m-0">
+  <!-- Video Sektion med tekst-overlay -->
+  <section class="relative bg-[#FAF8F4] text-white py-0 m-0">
     <div class="relative w-full h-[1000px] p-0 m-0">
-  
       <!-- Video baggrund -->
-      <video 
+      <video
         src={grain}
-        class="absolute top-0 left-0 w-full h-full object-cover" 
-        autoplay 
-        muted 
-        loop 
-        playsinline>
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
         Din browser understøtter ikke videoafspilning.
       </video>
-      
+
       <!-- Tekst overlay -->
-      <div class="absolute inset-0 flex items-center justify-start px-8 md:px-16 bg-black bg-opacity-30">
+      <div
+        class="absolute inset-0 flex items-center justify-start px-8 md:px-16 bg-black bg-opacity-30"
+      >
         <div class="max-w-lg">
-          <h2 class="text-3xl md:text-6xl karantina font-bold mb-4 leading-snug">
+          <h2
+            class="text-3xl md:text-6xl karantina font-bold mb-4 leading-snug"
+          >
             CRAFTED WITH A FOCUS ON TASTE AND SUSTAINABILITY
           </h2>
           <p class="text-lg jost leading-relaxed">
-            Gennem hele brygningsprocessen er kvalitetskontrol en topprioritet, hvor hver batch øl nøje overvåges og testes
-            for at sikre, at den lever op til bryggeriets høje standarder for smag, aroma, konsistens og bæredygtighed.
+            Gennem hele brygningsprocessen er kvalitetskontrol en topprioritet,
+            hvor hver batch øl nøje overvåges og testes for at sikre, at den
+            lever op til bryggeriets høje standarder for smag, aroma, konsistens
+            og bæredygtighed.
           </p>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- FAQ Sektion -->
   <section class="bg-[#141414] text-white py-12">
@@ -81,28 +95,49 @@ import grain from "../assets/images/grain.mp4";
       <div class="space-y-4 max-w-2xl mx-auto">
         <!-- FAQ 1 -->
         <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
-          <summary class="font-bold">Hvordan bestiller jeg et MaltClub abonnement?</summary>
-          <p class="text-gray-100 mt-2">Du kan bestille direkte via vores hjemmeside ved at vælge din ønskede pakke.</p>
+          <summary class="font-bold"
+            >Hvordan bestiller jeg et MaltClub abonnement?</summary
+          >
+          <p class="text-gray-100 mt-2">
+            Du kan bestille direkte via vores hjemmeside ved at vælge din
+            ønskede pakke.
+          </p>
         </details>
         <!-- FAQ 2 -->
         <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
           <summary class="font-bold">Hvor lang tid billeder jeg mig?</summary>
-          <p class="text-gray-100 mt-2">Leveringstiden afhænger af din lokation, men tager typisk 2-4 hverdage.</p>
+          <p class="text-gray-100 mt-2">
+            Leveringstiden afhænger af din lokation, men tager typisk 2-4
+            hverdage.
+          </p>
         </details>
         <!-- FAQ 3 -->
         <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
-          <summary class="font-bold">Hvor meget koster et MaltClub abonnement?</summary>
-          <p class="text-gray-100 mt-2">Prisen afhænger af den valgte pakke. Se vores priser under produkter.</p>
+          <summary class="font-bold"
+            >Hvor meget koster et MaltClub abonnement?</summary
+          >
+          <p class="text-gray-100 mt-2">
+            Prisen afhænger af den valgte pakke. Se vores priser under
+            produkter.
+          </p>
         </details>
         <!-- FAQ 4 -->
         <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
-          <summary class="font-bold">Hvordan kan jeg betale på MaltClub?</summary>
-          <p class="text-gray-100 mt-2">Vi accepterer kortbetaling, MobilePay og PayPal.</p>
+          <summary class="font-bold"
+            >Hvordan kan jeg betale på MaltClub?</summary
+          >
+          <p class="text-gray-100 mt-2">
+            Vi accepterer kortbetaling, MobilePay og PayPal.
+          </p>
         </details>
         <!-- FAQ 5 -->
         <details class="bg-[#C47C35] p-4 rounded-md cursor-pointer">
-          <summary class="font-bold">Hvornår hæver I penge på min konto?</summary>
-          <p class="text-gray-100 mt-2">Beløbet trækkes på dagen for din bestilling.</p>
+          <summary class="font-bold"
+            >Hvornår hæver I penge på min konto?</summary
+          >
+          <p class="text-gray-100 mt-2">
+            Beløbet trækkes på dagen for din bestilling.
+          </p>
         </details>
       </div>
     </div>
