@@ -7,16 +7,16 @@ const { title } = Astro.props;
 ---
 <script>
   const PASSWORD_KEY = "site_access_granted"; // Key for localStorage
-  const CORRECT_PASSWORD = "kea123"; // Your password
+  const CORRECT_PASSWORD = "kea123"; // KODEN TIL HJEMMESIDEN
 
-  // Check if access has already been granted
+  // tjek på om access er blevet "already been granted"
   if (!localStorage.getItem(PASSWORD_KEY)) {
-    const enteredPassword = prompt("Indtast adgangskoden:");
+    const enteredPassword = prompt("Indtast adgangskoden, (Koden står på dokumentet som du burde havde læst før du trykket linket hvis nu du var i tvilv:");
     if (enteredPassword === CORRECT_PASSWORD) {
-      localStorage.setItem(PASSWORD_KEY, "true"); // Store that access was granted
+      localStorage.setItem(PASSWORD_KEY, "true"); 
     } else {
-      alert("Forkert adgangskode!");
-      window.location.href = "https://example.com"; // Redirect on incorrect password
+      alert("du hører ikke til her, gå din vej!!!");
+      window.location.href = "https://google.com"; // bliv ført til google hvis koden er forkert 
     }
   }
 </script>
