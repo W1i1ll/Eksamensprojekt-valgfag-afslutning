@@ -250,9 +250,11 @@ import boblermobil from "../assets/images/boblermobil.svg";
 
 <section class="p-1">
   <div class="md:flex md:items-center md:gap-8">
+    <!-- Parallax-boks (tekstboks) -->
     <div
-      class="bg-black p-12 rounded-[20px] m-5 mt-6 md:w-1/2 md:m-20"
-      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+      id="parallax-box-2"
+      class="bg-black p-12 rounded-[20px] m-5 mt-6 md:w-1/2 md:m-20 relative z-10"
+      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1); position: relative;"
     >
       <h2 class="text-[36px] md:text-[64px] karantina font-bold text-white">
         De <span class="text-[#BE7E39]">fire</span> nøgleingredienser
@@ -267,7 +269,9 @@ import boblermobil from "../assets/images/boblermobil.svg";
     </div>
 
     <!-- Billeder -->
-    <div class="flex justify-center gap-8 md:flex-col md:gap-4 md:w-1/2">
+    <div
+      class="flex justify-center gap-8 md:flex-col md:gap-4 md:w-1/2 relative z-20"
+    >
       <!-- Malt billede -->
       <div class="relative md:-ml-60">
         <Image
@@ -292,7 +296,9 @@ import boblermobil from "../assets/images/boblermobil.svg";
 <section>
   <div class="flex flex-col md:flex-row md:items-center md:gap-8">
     <!-- Øverste billeder (Desktop) -->
-    <div class="flex justify-center gap-8 mt-8 md:w-1/2 md:flex-col md:gap-4">
+    <div
+      class="flex justify-center gap-8 mt-8 md:w-1/2 md:flex-col md:gap-4 z-20"
+    >
       <!-- Appelsin billede  desktop -->
       <div class="relative hidden md:block">
         <Image src={appelsin} alt="Appelsiner" class="w-[571px]" />
@@ -309,8 +315,9 @@ import boblermobil from "../assets/images/boblermobil.svg";
     </div>
 
     <div
-      class="bg-black md:p-7 p-12 rounded-[20px] mt-6 md:mt-0 md:w-1/2 md:m-20"
-      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1);"
+      id="parallax-box-3"
+      class="bg-black md:p-7 p-12 rounded-[20px] mt-6 md:mt-0 md:w-1/2 md:m-20 relative z-10"
+      style="box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 1); position: relative;"
     >
       <h2 class="text-[36px] md:text-[64px] karantina font-bold text-[#BE7E39]">
         Kreativitet <span class="text-white">og</span> eksperimenter
@@ -325,6 +332,7 @@ import boblermobil from "../assets/images/boblermobil.svg";
       </p>
     </div>
 
+    <!-- Billeder på mobil (skjult på desktop) -->
     <div class="flex md:hidden gap-8 justify-center mt-8">
       <!-- Appelsin billede / mobil -->
       <div class="relative w-1/2">
@@ -411,18 +419,19 @@ import boblermobil from "../assets/images/boblermobil.svg";
 </style>
 
 <script>
+  // POPUP NYHEDSBREV
   window.onload = () => {
     setTimeout(() => {
       document.getElementById("popup").classList.remove("-translate-x-full");
-    }, 3000); // Viser popup efter 3 sekunder
+    }, 3000);
   };
 
-  // Luk-popup funktion
   document.getElementById("close-btn").onclick = () => {
     document.getElementById("popup").classList.add("-translate-x-full");
   };
 
-  // Når dokumentet er klar
+  // BOKS 1 PARRALEX
+
   document.addEventListener("DOMContentLoaded", function () {
     const parallaxBox = document.getElementById("parallax-box");
 
@@ -435,18 +444,46 @@ import boblermobil from "../assets/images/boblermobil.svg";
     });
   });
 
+  // STAGGER ANIMATION
   import { inView, animate, stagger } from "motion";
 
-  // Når elementet er i viewport
   inView("#stagger", () => {
     animate(
       ".staggeranimation li",
       { opacity: [0, 1], transform: ["translateY(50px)", "translateY(0)"] },
       {
-        delay: stagger(1, { start: 1 }), // Forsinkelse mellem hver li
-        duration: 1, // Varighed af animation
+        delay: stagger(1, { start: 1 }),
+        duration: 1,
         easing: "ease-out",
       }
     );
+  });
+
+  // BOKS 2 PARALLEX
+  document.addEventListener("DOMContentLoaded", function () {
+    const parallaxBox = document.getElementById("parallax-box-2");
+
+    // Funktion til at opdatere positionen af boksen ved scroll
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      // Juster hvor meget boksen bevæger sig baseret på scroll-position
+      // Parallax-effekten - skaber bevægelse for boksen
+      parallaxBox.style.transform = `translateY(${scrollPosition * -0.3}px)`;
+      parallaxBox.style.top = `${scrollPosition * -0.3 + 1600}px`; // Juster +100 for at starte højere
+    });
+  });
+
+  // BOKS 3 PARALLEX
+  document.addEventListener("DOMContentLoaded", function () {
+    const parallaxBox = document.getElementById("parallax-box-3");
+
+    // Funktion til at opdatere positionen af boksen ved scroll
+    window.addEventListener("scroll", function () {
+      const scrollPosition = window.scrollY;
+      // Juster hvor meget boksen bevæger sig baseret på scroll-position
+      // Parallax-effekten - skaber bevægelse for boksen
+      parallaxBox.style.transform = `translateY(${scrollPosition * -0.3}px)`;
+      parallaxBox.style.top = `${scrollPosition * -0.3 + 2000}px`; // Juster +100 for at starte højere
+    });
   });
 </script>
