@@ -5,6 +5,21 @@ import "../styles/tailwind.css";
 import "animate.css";
 const { title } = Astro.props;
 ---
+<script>
+  const PASSWORD_KEY = "site_access_granted"; // Key for localStorage
+  const CORRECT_PASSWORD = "kea123"; // Your password
+
+  // Check if access has already been granted
+  if (!localStorage.getItem(PASSWORD_KEY)) {
+    const enteredPassword = prompt("Indtast adgangskoden:");
+    if (enteredPassword === CORRECT_PASSWORD) {
+      localStorage.setItem(PASSWORD_KEY, "true"); // Store that access was granted
+    } else {
+      alert("Forkert adgangskode!");
+      window.location.href = "https://example.com"; // Redirect on incorrect password
+    }
+  }
+</script>
 
 <html lang="da">
   <head>
