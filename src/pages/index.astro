@@ -237,14 +237,14 @@ import boblermobil from "../assets/images/boblermobil.svg";
   <Image
     src={boblerdesk}
     alt="Ølbobler"
-    class="hidden md:block m-auto animate-float"
+    class="hidden md:block m-auto bobble-animation"
   />
 
   <!-- Mobil-bobler (vises kun på mobile skærme) -->
   <Image
     src={boblermobil}
     alt="Ølbobler"
-    class="block md:hidden mx-auto mt-10 animate-float"
+    class="block md:hidden mx-auto mt-10 bobble-animation"
   />
 </div>
 
@@ -377,6 +377,36 @@ import boblermobil from "../assets/images/boblermobil.svg";
 
   .floating-beer-2 {
     animation: float-2 3s ease-in-out infinite;
+  }
+
+  /* Hoved-animation for tydelig op og ned bevægelse */
+  @keyframes bobbleFloat {
+    0% {
+      transform: translateY(0); /* Start position */
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-30px); /* Højere bevægelse op */
+      opacity: 1; /* Boblen bliver mere synlig */
+    }
+    100% {
+      transform: translateY(0); /* Tilbage til bunden */
+      opacity: 0.7; /* Lavere synlighed når den er på vej ned */
+    }
+  }
+
+  /* Tilføjer flydende op og ned animation på bobler */
+  .bobble-animation {
+    animation: bobbleFloat 4s infinite ease-in-out;
+  }
+
+  /* Anvender tilfældige variationer på hvert billede af boblerne */
+  .bobble-animation:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .bobble-animation:nth-child(2) {
+    animation-delay: 1s; /* Delay for at gøre bevægelsen mindre synkron */
   }
 </style>
 
