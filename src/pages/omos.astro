@@ -11,14 +11,15 @@ import grain from "../assets/images/grain.mp4";
   <Header />
 
   <!-- Hero Sektion -->
-  <section
-    class="relative h-screen bg-cover bg-center text-white flex items-center justify-center"
-    style={`background-image: url(${faelleskab.src});`}
-  >
-    <div class="text-center px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">ET ØJEBLIK DER BETYDER MERE END BARE ØL</h1>
-    </div>
-  </section>
+ <img
+  src={faelleskab.src}
+  alt="Background Image"
+  class="h-screen w-full object-cover"
+/>
+<div class="absolute top-0 left-0 w-full h-screen flex items-center justify-center karantina text-8xl text-white">
+  ET ØJEBLIK DER BETYDER MERE END BARE ØL
+</div>
+
 
 <!-- Passion Sektion -->
 <section class="bg-[#141414] text-white py-12">
